@@ -8,5 +8,7 @@ Gem::Specification.new do |s|
   s.email       = 'dottorblaster@gmail.com'
   s.files       = ["lib/burst.rb"]
   s.homepage    = ''
-  s.license       = 'MIT'
+  s.license     = 'MIT'
+
+  s.add_runtime_dependency 'trollop', '~>2.1'
 end
