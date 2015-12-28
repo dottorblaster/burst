@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Alessio Biancalana"]
   s.email       = 'dottorblaster@gmail.com'
   s.files       = ["lib/burst.rb"]
-  s.homepage    = ''
+  s.homepage    = 'https://github.com/dottorblaster/burst'
   s.license     = 'MIT'
 
   s.add_runtime_dependency 'trollop', '~>2.1'
