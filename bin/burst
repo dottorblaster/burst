@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
 
-require 'burst'
+$:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
 
+require 'burst'
+require 'trollop'
+
+opts = Trollop::options do
+  opt :title, "Post title", :type => :string
+end
+
+Burst.go(opts)
