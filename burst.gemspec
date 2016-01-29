@@ -12,5 +12,6 @@ Gem::Specification.new do |s|
 
   s.executables << 'burst'
 
+  s.add_runtime_dependency 'json', '~>1.8.3'
   s.add_runtime_dependency 'trollop', '~>2.1'
 end
