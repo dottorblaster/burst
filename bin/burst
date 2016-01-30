@@ -9,9 +9,10 @@ require 'trollop'
 config = {}
 customs = {}
 
-if(File.exist?(ENV['HOME'] + '.burstrc')) {
+if File.exist?(ENV['HOME'] + '.burstrc')
   config = JSON.parse(File.read(ENV['HOME'] + '.burstrc'))
-}
+end
+
 
 opts = Trollop::options do
   opt :title, "Post title", :type => :string
