@@ -3,11 +3,19 @@
 $:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
 
 require 'burst'
+require 'json'
 require 'trollop'
+
+config = {}
+customs = {}
+
+if(File.exist?(ENV['HOME'] + '.burstrc')) {
+  config = JSON.parse(File.read(ENV['HOME'] + '.burstrc'))
+}
 
 opts = Trollop::options do
   opt :title, "Post title", :type => :string
 end
 Trollop::die :title, "must be a string" if !opts[:title]
 
-Burst.go(opts)
+Burst.go(opts, customs)

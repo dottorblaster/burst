@@ -16,7 +16,7 @@ module Burst
       puts line[:label] + ": " + line[:content]
     end
 
-    def go(options)
+    def go(options, customs)
       puts "---"
       front_matter_generator(options).each do |line|
         print_line(line)
