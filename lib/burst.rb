@@ -1,6 +1,6 @@
 module Burst
   class << self
-    def front_matter_generator(options)
+    def front_matter_generator(options, customs)
       front_matter = [
         {label: "layout", content: "post"},
         {label: "status", content: "publish"},
@@ -10,6 +10,12 @@ module Burst
         {label: "categories", content: "\n- Category"},
         {label: "tags", content: "\n- first_tag\n- second_tag"}
       ]
+
+      if options[:customs] != ""
+        customs.each do |field|
+          front_matter.insert(2, {label: field[:label], content: field[:content]})
+        end
+      end
     end
 
     def print_line(line)
@@ -18,7 +24,7 @@ module Burst
 
     def go(options, customs)
       puts "---"
-      front_matter_generator(options).each do |line|
+      front_matter_generator(options, customs).each do |line|
         print_line(line)
       end
       puts "---"

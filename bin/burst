@@ -17,6 +17,7 @@ customs = config['customs'] if config.has_key?('customs')
 
 opts = Trollop::options do
   opt :title, "Post title", :type => :string
+  opt :customs, "Custom fields to use", :type => :string, :default => ""
 end
 Trollop::die :title, "must be a string" if !opts[:title]
 
