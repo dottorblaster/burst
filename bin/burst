@@ -3,9 +3,11 @@
 $:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
 
 require 'burst'
+require 'rubygems'
 require 'json'
 require 'trollop'
 
+specs = Gem::Specification::load('burst.gemspec')
 config = {}
 customs = {}
 
@@ -16,6 +18,7 @@ end
 customs = config['customs'] if config.has_key?('customs')
 
 opts = Trollop::options do
+  version "Burst " + specs.version.to_s
   opt :title, "Post title", :type => :string
 end
 
