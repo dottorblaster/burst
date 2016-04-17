@@ -11,11 +11,11 @@ module Burst
         {label: "tags", content: "\n- first_tag\n- second_tag"}
       ]
 
-      if options[:customs] != ""
-        customs.each do |field|
-          front_matter.insert(2, {label: field[:label], content: field[:content]})
-        end
-      end
+      # if options[:customs] != ""
+      #   customs.each do |field|
+      #     front_matter.insert(2, {label: field[:label], content: field[:content]})
+      #   end
+      # end
     end
 
 		def print_line(line)
