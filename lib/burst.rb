@@ -5,7 +5,7 @@ module Burst
         {label: "layout", content: "post"},
         {label: "status", content: "publish"},
         {label: "published", content: "true"},
-        {label: "title", content: options[:title]},
+        {label: "title", content: options[:title] || ""},
         {label: "date", content: Time.now.to_s},
         {label: "categories", content: "\n- Category"},
         {label: "tags", content: "\n- first_tag\n- second_tag"}
