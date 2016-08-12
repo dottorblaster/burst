@@ -1,7 +1,7 @@
 module Burst
 	class << self
 		def front_matter_generator(options, config, customs)
-			initial_front_matter = [
+			front_matter = [
 				{label: "layout", content: "post"},
 				{label: "status", content: "publish"},
 				{label: "published", content: "true"},
@@ -11,7 +11,11 @@ module Burst
 				{label: "tags", content: "\n- first_tag\n- second_tag"}
 			]
 
-			# Here I should implement the templating logic
+			if options[:custom] != ""
+				front_matter = CustomsHandler.populate(front_matter, customs[options[:custom]])
+			end
+
+			return front_matter
 		end
 
 		def print_line(line)

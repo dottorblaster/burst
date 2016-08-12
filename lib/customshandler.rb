@@ -1,20 +1,25 @@
 module CustomsHandler
 	class << self
 		def customs_replace(front_matter, custom)
-			# TODO
-			# Replace fields in front_matter with values from
-			# custom, return
+			custom['replaces'].each do |key, value|
+				front_matter.each do |element|
+					element[:content] = value if element[:label] == key
+				end
+			end
+
+			return front_matter
 		end
 
 		def customs_push(front_matter, custom)
-			# TODO
-			# Push additional fields into front_matter, return
+			custom['adds'].each do |key, value|
+				front_matter.insert(4, {label: key, content: value})
+			end
+
+			return front_matter
 		end
 
 		def populate(front_matter, custom)
-			# TODO
-			# Replace front_matter's fields with customs, push
-			# additional ones into the array and return them
+			return customs_replace(customs_push(front_matter, custom), custom)
 		end
 	end
 end
