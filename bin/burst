@@ -16,9 +16,9 @@ end
 customs = config['customs'] if config.has_key?('customs')
 
 opts = Trollop::options do
-  version "Burst 0.1.0"
+  version "Burst v0.1.0"
   opt :title, "Post title", :type => :string
   opt :customs, "Custom fields to use", :type => :string, :default => ""
 end
 
-Burst.go(opts, customs)
+Burst.go(opts, config, customs)
