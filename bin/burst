@@ -3,6 +3,7 @@
 $:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
 
 require 'burst'
+require 'customshandler'
 require 'json'
 require 'trollop'
 

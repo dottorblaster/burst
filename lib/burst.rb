@@ -1,22 +1,18 @@
 module Burst
-  class << self
-    def front_matter_generator(options, config, customs)
-      front_matter = [
-        {label: "layout", content: "post"},
-        {label: "status", content: "publish"},
-        {label: "published", content: "true"},
-        {label: "title", content: options[:title] || config['defaultTitle'] || ""},
-        {label: "date", content: Time.now.to_s},
-        {label: "categories", content: "\n- Category"},
-        {label: "tags", content: "\n- first_tag\n- second_tag"}
-      ]
+	class << self
+		def front_matter_generator(options, config, customs)
+			initial_front_matter = [
+				{label: "layout", content: "post"},
+				{label: "status", content: "publish"},
+				{label: "published", content: "true"},
+				{label: "title", content: options[:title] || config['defaultTitle'] || ""},
+				{label: "date", content: Time.now.to_s},
+				{label: "categories", content: "\n- Category"},
+				{label: "tags", content: "\n- first_tag\n- second_tag"}
+			]
 
-      # if options[:customs] != ""
-      #   customs.each do |field|
-      #     front_matter.insert(2, {label: field[:label], content: field[:content]})
-      #   end
-      # end
-    end
+			# Here I should implement the templating logic
+		end
 
 		def print_line(line)
 			puts line[:label] + ": " + line[:content]
