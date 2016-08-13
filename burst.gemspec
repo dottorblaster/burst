@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Give an energy burst to your Jekyll workflow"
   s.authors     = ["Alessio Biancalana"]
   s.email       = 'dottorblaster@gmail.com'
-  s.files       = ["lib/burst.rb"]
+  s.files       = ["lib/burst.rb", "lib/customshandler.rb"]
   s.homepage    = 'https://github.com/dottorblaster/burst'
   s.license     = 'MIT'
 
