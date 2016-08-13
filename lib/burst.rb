@@ -19,7 +19,7 @@ module Burst
 		end
 
 		def print_line(line)
-			puts line[:label] + ": " + line[:content]
+			puts line[:label].yellow + ": " + line[:content].cyan
 		end
 
 		def version(ver)

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'burst'
-  s.version     = '0.1.0'
+  s.version     = '1.0.0'
   s.date        = '2015-12-28'
   s.summary     = "Easier front-matter YAML for Jekyll"
   s.description = "Give an energy burst to your Jekyll workflow"
@@ -14,4 +14,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'json', '~>1.8.3'
   s.add_runtime_dependency 'trollop', '~>2.1'
+  s.add_runtime_dependency 'colorize', '~>0.8.1'
 end
