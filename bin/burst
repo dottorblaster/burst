@@ -4,6 +4,7 @@ $:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
 
 require 'burst'
 require 'customshandler'
+require 'frontmattergenerator'
 require 'json'
 require 'trollop'
 require 'colorize'
@@ -18,7 +19,7 @@ end
 customs = config['customs'] if config.has_key?('customs')
 
 opts = Trollop::options do
-  version "Burst v1.0.0"
+  version "Burst v1.1.0"
   opt :title, "Post title", :type => :string
   opt :custom, "Custom structure to use (from config file)", :type => :string, :default => ""
 end
