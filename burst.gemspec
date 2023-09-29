@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.executables << 'burst'
 
-  s.add_runtime_dependency 'json', '~>2.3.1'
+  s.add_runtime_dependency 'json', '~>2.6.3'
   s.add_runtime_dependency 'trollop', '~>2.9.10'
-  s.add_runtime_dependency 'colorize', '~>0.8.1'
+  s.add_runtime_dependency 'colorize', '~>1.1.0'
 end
