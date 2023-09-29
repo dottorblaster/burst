@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'burst'
-  s.version     = '1.2.0'
+  s.version     = '1.2.1'
   s.date        = '2015-12-28'
   s.summary     = "Easier front-matter YAML for Jekyll"
   s.description = "Give an energy burst to your Jekyll workflow"
