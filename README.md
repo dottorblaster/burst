@@ -1,6 +1,8 @@
 # Burst
 Give an energy burst to your Jekyll workflow :bowtie:
 
+_Unmaintained, see the sequel: https://github.com/dottorblaster/burstfm_
+
 ### Setup
 Burst is a Ruby gem, so run:
 
